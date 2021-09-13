@@ -1,6 +1,0 @@
-package com.example.to_com_sede_app
-
-import io.flutter.embedding.android.FlutterActivity
-
-class MainActivity: FlutterActivity() {
-}
