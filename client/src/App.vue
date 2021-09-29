@@ -1,15 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    {{ cpf | cpf }}
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
+  filters: {
+    cpf(valor) {
+      const arr = valor.split("");
+      arr.splice(3, 0, ".");
+      arr.splice(7, 0, ".");
+      arr.splice(11, 0, "-");
+
+      return arr.join("");
+    },
+  },
   name: "App",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      cpf: "12345678912",
+    };
   },
 };
 </script>
