@@ -1,27 +1,38 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
-    {{ cpf | cpf }}
+    <!-- {{ cpf | cpf | inverter }} -->
+    <p>Helllllloooo</p>
   </div>
 </template>
 
 <script>
+// import wattersMixin from "./wattersMixin";
 export default {
-  filters: {
-    cpf(valor) {
-      const arr = valor.split("");
-      arr.splice(3, 0, ".");
-      arr.splice(7, 0, ".");
-      arr.splice(11, 0, "-");
+  // mixins: [wattersMixin],
+  // filters: {
+  //   cpf(valor) {
+  //     const arr = valor.split("");
+  //     arr.splice(3, 0, ".");
+  //     arr.splice(7, 0, ".");
+  //     arr.splice(11, 0, "-");
 
-      return arr.join("");
-    },
-  },
+  //     return arr.join("");
+  //   },
+  // },
   name: "App",
   data() {
     return {
       cpf: "12345678912",
     };
+  },
+  post() {
+    this.$http
+      .post("usuarios.json", {
+        name: "Caio",
+        email: "caio.sfg@gmail.com",
+      })
+      .then((res) => console.log(res));
   },
 };
 </script>
