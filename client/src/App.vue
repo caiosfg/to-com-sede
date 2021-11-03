@@ -2,7 +2,7 @@
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- {{ cpf | cpf | inverter }} -->
-    <p>Helllllloooo</p>
+    <button @click="post()">Helllllloooo</button>
   </div>
 </template>
 
@@ -26,13 +26,15 @@ export default {
       cpf: "12345678912",
     };
   },
-  post() {
-    this.$http
-      .post("usuarios.json", {
-        name: "Caio",
-        email: "caio.sfg@gmail.com",
-      })
-      .then((res) => console.log(res));
+  methods: {
+    post() {
+      this.$http
+        .post("usuarios.json", {
+          name: "Caio",
+          email: "caio.sfg@gmail.com",
+        })
+        .then((res) => console.log(res));
+    },
   },
 };
 </script>
