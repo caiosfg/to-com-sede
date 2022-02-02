@@ -18,6 +18,7 @@ export default{
         onSaveUser(){
             this.$router.push('/users/' + this.userId)
         }
-    }
+    },
+    layout: 'default'
 }
 </script>
