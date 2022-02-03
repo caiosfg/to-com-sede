@@ -6,8 +6,12 @@
 </template>
 
 <script>
-import Header from ''
+import Header from '~/components/Header'
+
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components:{
+    Header
+  }
 }
 </script>
