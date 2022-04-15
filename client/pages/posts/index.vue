@@ -1,5 +1,7 @@
 <template>
-  <div class="post"></div>
+  <div class="post">
+    <h3>Posts Page</h3>
+  </div>
 </template>
 
 <style scoped>
@@ -7,5 +9,6 @@
   display: flex;
   align-items: center;
   justify-items: center;
+  background-image: url('~assets/images/banner.png') ;
 }
 </style>
