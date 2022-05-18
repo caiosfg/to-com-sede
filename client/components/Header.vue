@@ -7,6 +7,9 @@
       <li>
         <NuxtLink to="/users">Usuarios</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/users">Blog</NuxtLink>
+      </li>
     </ul>
   </header>
 </template>
