@@ -1,13 +1,31 @@
 <template>
     <header class="header">
+        <a href="" class="toggle" @click="toggleMenu()">
+            <i class="fa fa-lg" :class="icon"></i>
+        </a>
+        <h1 class="title">
+            {{ title }}
+        </h1>
     </header>
 </template>
 
 <script>
-import Header from '../Header.vue'
 export default {
-  components: { Header },
-    name: 'Header'
+    name: 'Header',
+    props: {
+        title: String,
+        hideToogle: Boolean
+    },
+    computed: {
+        icon () {
+            return "fa-angle left"
+        }
+    },
+    methods: {
+        toggleMenu() {
+
+        }
+    }
 }
 </script>
 
